@@ -5,31 +5,26 @@ import mx.itson.edu.conversionmoneda.ui.Entrada;
 import mx.itson.edu.conversionmoneda.ui.Salida;
 import mx.itson.edu.conversionmoneda.user.Cliente;
 
-public class Opciones {
+import java.util.Scanner;
 
+public class Opciones {
+    Scanner sc = new Scanner(System.in);
     public void operarMonedaDinero() {
-        System.out.println("Que moneda desea mx.itson.edu.conversionmoneda.controller.Convertir\n[1] Dollar\n[2] Euro\n[3] Rublo Ruso");
-        int opcion = 1;
-        System.out.println(opcion);
-        elegirMoneda(opcion);
+
+        System.out.println("Que moneda desea Convertir");
+        Moneda[] monedas = Moneda.values();
+        int i = 0;
+        for (Moneda c : monedas) {
+            i++;
+            System.out.println("["+i+"] "+c);
+        }
+//        int opcion = 1;
+//        System.out.println(opcion);
+        elegirMoneda(sc.nextInt());
     }
 
     private void elegirMoneda( int opcion) {
-        switch (opcion) {
-            case 1:
-                //dollar
-                ingresarDineroMoneda(Moneda.DO);
-                break;
-            case 2:
-                //euro
-                ingresarDineroMoneda(Moneda.EU);
-                break;
-            case 3:
-                //rublo
-                ingresarDineroMoneda(Moneda.RU);
-                break;
-        }
-
+        ingresarDineroMoneda(Moneda.values()[opcion]);
     }
 
     private void ingresarDineroMoneda(Moneda moneda) {
