@@ -1,3 +1,8 @@
+package mx.itson.edu.conversionmoneda.controller;
+
+import mx.itson.edu.conversionmoneda.service.Aritmetica;
+import mx.itson.edu.conversionmoneda.ui.Entrada;
+
 public class Convertir {
     Entrada entrada;
     private double cantidad;
@@ -9,10 +14,10 @@ public class Convertir {
         convertirDinero();
     }
     public void convertirDinero() {
-        double precio = entrada.getMoneda().getvalor();
-        cantidad = Aritmetica.DIVIDIR.calcular((int) entrada.getCliente().getDinero(), precio);
+        double precio = entrada.moneda().getvalor();
+        cantidad = Aritmetica.DIVIDIR.calcular((int) entrada.cliente().getDinero(), precio);
         total = Aritmetica.MULTIPLICAR.calcular(cantidad, precio);
-        cambio = Aritmetica.RESTAR.calcular(entrada.getCliente().getDinero(), total);
+        cambio = Aritmetica.RESTAR.calcular(entrada.cliente().getDinero(), total);
     }
 
     public double getCantidad() {

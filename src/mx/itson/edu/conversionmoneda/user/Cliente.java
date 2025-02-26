@@ -1,3 +1,5 @@
+package mx.itson.edu.conversionmoneda.user;
+
 public class Cliente {
     private double dinero;
 

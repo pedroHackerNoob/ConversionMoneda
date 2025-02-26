@@ -1,5 +1,9 @@
+import mx.itson.edu.conversionmoneda.test.Integracion;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Integracion integracion = new Integracion();
+        integracion.iniciar();
     }
+
 }

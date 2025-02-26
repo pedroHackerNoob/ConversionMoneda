@@ -1,3 +1,5 @@
+package mx.itson.edu.conversionmoneda.config;
+
 public enum Moneda {
     DO(20.44),
     EU(21.36),

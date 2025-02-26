@@ -1,3 +1,5 @@
+package mx.itson.edu.conversionmoneda.test;
+
 import mx.itson.edu.conversionmoneda.config.Opciones;
 
 public class Integracion {

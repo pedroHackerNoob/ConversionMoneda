@@ -1,10 +1,14 @@
-import java.util.Scanner;
+package mx.itson.edu.conversionmoneda.config;
+
+import mx.itson.edu.conversionmoneda.controller.Convertir;
+import mx.itson.edu.conversionmoneda.ui.Entrada;
+import mx.itson.edu.conversionmoneda.ui.Salida;
+import mx.itson.edu.conversionmoneda.user.Cliente;
 
 public class Opciones {
-    Scanner sc = new Scanner(System.in);
 
     public void operarMonedaDinero() {
-        System.out.println("Que moneda desea Convertir\n[1] Dollar\n[2] Euro\n[3] Rublo Ruso");
+        System.out.println("Que moneda desea mx.itson.edu.conversionmoneda.controller.Convertir\n[1] Dollar\n[2] Euro\n[3] Rublo Ruso");
         int opcion = 1;
         System.out.println(opcion);
         elegirMoneda(opcion);

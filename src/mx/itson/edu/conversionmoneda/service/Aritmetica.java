@@ -1,3 +1,5 @@
+package mx.itson.edu.conversionmoneda.service;
+
 public enum Aritmetica {
     SUMAR {
         @Override
