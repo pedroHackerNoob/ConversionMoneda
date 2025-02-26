@@ -16,6 +16,9 @@ public class Convertir {
     public void convertirDinero() {
         double precio = entrada.moneda().getvalor();
         cantidad = Aritmetica.DIVIDIR.calcular((int) entrada.cliente().getDinero(), precio);
+        if (cantidad == 0) {
+            System.out.println("No se puede convertir el dinero"+ cantidad);
+        }
         total = Aritmetica.MULTIPLICAR.calcular(cantidad, precio);
         cambio = Aritmetica.RESTAR.calcular(entrada.cliente().getDinero(), total);
     }

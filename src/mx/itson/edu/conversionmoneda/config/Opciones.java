@@ -10,19 +10,20 @@ import java.util.Scanner;
 public class Opciones {
     Scanner sc = new Scanner(System.in);
     public void operarMonedaDinero() {
-
         System.out.println("Que moneda desea Convertir");
+        mostrarMonedas();
+//        elegirMoneda(sc.nextInt());
+        //automatizar
+        elegirMoneda(3);
+    }
+    private void mostrarMonedas() {
         Moneda[] monedas = Moneda.values();
         int i = 0;
         for (Moneda c : monedas) {
+            System.out.println("["+i+"] "+c+" Valor:"+monedas[i].getvalor());
             i++;
-            System.out.println("["+i+"] "+c);
         }
-//        int opcion = 1;
-//        System.out.println(opcion);
-        elegirMoneda(sc.nextInt());
     }
-
     private void elegirMoneda( int opcion) {
         ingresarDineroMoneda(Moneda.values()[opcion]);
     }
@@ -30,7 +31,7 @@ public class Opciones {
     private void ingresarDineroMoneda(Moneda moneda) {
         System.out.println("Usted eligio: "+moneda+" con el valor de: "+moneda.getvalor());
         System.out.println("Ingrese su dinero");
-        double dinero = 130.0;
+        double dinero = 130;
         System.out.println("####################################");
         System.out.println(dinero);
         Entrada entrada = new Entrada(moneda, new Cliente(dinero));

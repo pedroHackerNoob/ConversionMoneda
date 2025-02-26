@@ -7,6 +7,8 @@ public class Integracion {
     public void iniciar() {
         banner();
         opciones.operarMonedaDinero();
+        //automatizar
+//        iniciar();
     }
     private void banner(){
         System.out.println("""
